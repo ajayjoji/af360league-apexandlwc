@@ -10,6 +10,7 @@ export default class PromotionWizardStep1 extends LightningElement {
 
     connectedCallback(){
         this.promotionName = this.promotionState?.value?.promotionName;
+        alert('Loaded promotion name: ' + this.promotionName);
     }
 
     handleChange(event) {
