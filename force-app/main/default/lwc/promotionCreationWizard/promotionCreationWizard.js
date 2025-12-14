@@ -1,7 +1,7 @@
 import { LightningElement, api, track } from 'lwc';
 import { NavigationMixin } from 'lightning/navigation';
+import promotionStateManager from "c/promotionStateManager";
 
-/** TODO FOR THE CHALLENGE: import the state manager */
 
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { CloseActionScreenEvent } from 'lightning/actions';
@@ -11,8 +11,8 @@ export default class PromotionCreationWizard extends NavigationMixin(LightningEl
     @api recordId; // Account Id from record page context
 
     currentStep = 1;
-
-    /** TODO FOR THE CHALLENGE: initialize the state manager */
+    debugger;
+    promotionState = promotionStateManager();
 
     @track isSaving = false;
 
